@@ -77,35 +77,32 @@ namespace SatelliteDataProcessingApp
 
 		private void Highlight(ListBox listBox, int index)
 		{
-			try
-			{
-				listBox.ClearSelected();
+			listBox.ClearSelected();
 
-				if (index == 0)
+			if (index == -1)
+			{
+				return;
+			}
+			else if (index == 0)
+			{
+				for (int i = index; i <= index + 2; i++)
 				{
-					for (int i = index; i <= index + 2; i++)
-					{
-						listBox.SelectedIndex = i;
-					}
-				}
-				else if (index == 399)
-				{
-					for (int i = index - 2; i <= index; i++)
-					{
-						listBox.SelectedIndex = i;
-					}
-				}
-				else
-				{
-					for (int i = index - 2; i <= index + 2; i++)
-					{
-						listBox.SelectedIndex = i;
-					}
+					listBox.SelectedIndex = i;
 				}
 			}
-			catch (Exception ex)
+			else if (index == 399)
 			{
-				MessageBox.Show($"Error {ex.Message}");
+				for (int i = index - 2; i <= index; i++)
+				{
+					listBox.SelectedIndex = i;
+				}
+			}
+			else
+			{
+				for (int i = index - 2; i <= index + 2; i++)
+				{
+					listBox.SelectedIndex = i;
+				}
 			}
 		}
 
@@ -127,6 +124,8 @@ namespace SatelliteDataProcessingApp
 		#region Sort & Search
 		private bool SelectionSort(LinkedList<double> list)
 		{
+			bool sort;
+
 			try
 			{
 				int min = 0;
@@ -152,17 +151,21 @@ namespace SatelliteDataProcessingApp
 					currentI.Value = temp;
 				}
 
-				return true;
+				sort = true;
 			}
 			catch (Exception ex)
 			{
+				sort = false;
 				MessageBox.Show($"Error {ex.Message}");
-				return false;
 			}
+
+			return sort;
 		}
 
 		private bool InsertionSort(LinkedList<double> list)
 		{
+			bool sort;
+
 			try
 			{
 				int max = NumberOfNodes(list);
@@ -182,17 +185,21 @@ namespace SatelliteDataProcessingApp
 					}
 				}
 
-				return true;
+				sort = true;
 			}
 			catch (Exception ex)
 			{
+				sort = false;
 				MessageBox.Show($"Error {ex.Message}");
-				return false;
 			}
+
+			return sort;
 		}
 
 		private int BinarySearchIterative(LinkedList<double> list, int key, int min, int max)
 		{
+			int index;
+
 			try
 			{
 				while (min <= max)
@@ -213,17 +220,21 @@ namespace SatelliteDataProcessingApp
 					}
 				}
 
-				return min;
+				index = min;
 			}
 			catch (Exception ex)
 			{
+				index = -1;
 				MessageBox.Show($"Error {ex.Message}");
-				return -1;
 			}
+
+			return index;
 		}
 
 		private int BinarySearchRecursive(LinkedList<double> list, int key, int min, int max)
 		{
+			int index;
+
 			try
 			{
 				if (min <= max)
@@ -244,13 +255,15 @@ namespace SatelliteDataProcessingApp
 					}
 				}
 
-				return min;
+				index = min;
 			}
 			catch (Exception ex)
 			{
+				index = -1;
 				MessageBox.Show($"Error {ex.Message}");
-				return -1;
 			}
+
+			return index;
 		}
 		#endregion
 
