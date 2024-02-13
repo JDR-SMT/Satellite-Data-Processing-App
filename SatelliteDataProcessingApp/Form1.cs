@@ -75,26 +75,7 @@ namespace SatelliteDataProcessingApp
 			e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 		}
 
-		private bool ValidKey(LinkedList<double> list, int key, TextBox textBox)
-		{
-			if (!string.IsNullOrWhiteSpace(textBox.Text))
-			{
-				if (key >= (int)list.Min() && key <= (int)list.Max())
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-			}
-			else
-			{
-				return false;
-			}
-		}
-
-		private void Highlight(LinkedList<double> list, ListBox listBox, int index)
+		private void Highlight(ListBox listBox, int index)
 		{
 			try
 			{
@@ -305,7 +286,7 @@ namespace SatelliteDataProcessingApp
 			int index = BinarySearchIterative(SensorA, key, 0, NumberOfNodes(SensorA));
 			stopwatch.Stop();
 
-			Highlight(SensorA, ListBoxA, index);
+			Highlight(ListBoxA, index);
 			TextBoxIterativeTimeA.Text = $"{stopwatch.ElapsedTicks} Ticks";
 		}
 
@@ -317,8 +298,55 @@ namespace SatelliteDataProcessingApp
 			stopwatch.Start();
 			int index = BinarySearchRecursive(SensorA, key, 0, NumberOfNodes(SensorA));
 			stopwatch.Stop();
-			Highlight(SensorA, ListBoxA, index);
+			Highlight(ListBoxA, index);
 			TextBoxRecursiveTimeA.Text = $"{stopwatch.ElapsedTicks} Ticks";
+		}
+
+		private void ButtonSelectionSortB_Click(object sender, EventArgs e)
+		{
+			var stopwatch = new Stopwatch();
+			stopwatch.Start();
+			SelectionSort(SensorB);
+			stopwatch.Stop();
+			ShowAllSensorData();
+			DisplayListBoxData(SensorB, ListBoxB);
+			TextBoxSelectionTimeB.Text = $"{stopwatch.ElapsedMilliseconds} Milliseconds";
+		}
+
+		private void ButtonInsertionSortB_Click(object sender, EventArgs e)
+		{
+			var stopwatch = new Stopwatch();
+			stopwatch.Start();
+			InsertionSort(SensorB);
+			stopwatch.Stop();
+			ShowAllSensorData();
+			DisplayListBoxData(SensorB, ListBoxB);
+			TextBoxInsertionTimeB.Text = $"{stopwatch.ElapsedMilliseconds} Milliseconds";
+		}
+
+		private void ButtonIterativeSearchB_Click(object sender, EventArgs e)
+		{
+			int.TryParse(TextBoxSearchB.Text, out int key);
+
+			var stopwatch = new Stopwatch();
+			stopwatch.Start();
+			int index = BinarySearchIterative(SensorB, key, 0, NumberOfNodes(SensorB));
+			stopwatch.Stop();
+
+			Highlight(ListBoxB, index);
+			TextBoxIterativeTimeB.Text = $"{stopwatch.ElapsedTicks} Ticks";
+		}
+
+		private void ButtonRecursiveSearchB_Click(object sender, EventArgs e)
+		{
+			int.TryParse(TextBoxSearchB.Text, out int key);
+
+			var stopwatch = new Stopwatch();
+			stopwatch.Start();
+			int index = BinarySearchRecursive(SensorB, key, 0, NumberOfNodes(SensorB));
+			stopwatch.Stop();
+			Highlight(ListBoxB, index);
+			TextBoxRecursiveTimeB.Text = $"{stopwatch.ElapsedTicks} Ticks";
 		}
 		#endregion
 	}

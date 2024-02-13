@@ -295,6 +295,7 @@ namespace SatelliteDataProcessingApp
 			this.ButtonRecursiveSearchB.TabIndex = 28;
 			this.ButtonRecursiveSearchB.Text = "Recursive";
 			this.ButtonRecursiveSearchB.UseVisualStyleBackColor = true;
+			this.ButtonRecursiveSearchB.Click += new System.EventHandler(this.ButtonRecursiveSearchB_Click);
 			// 
 			// TextBoxIterativeTimeB
 			// 
@@ -312,6 +313,7 @@ namespace SatelliteDataProcessingApp
 			this.ButtonIterativeSearchB.TabIndex = 26;
 			this.ButtonIterativeSearchB.Text = "Iterative";
 			this.ButtonIterativeSearchB.UseVisualStyleBackColor = true;
+			this.ButtonIterativeSearchB.Click += new System.EventHandler(this.ButtonIterativeSearchB_Click);
 			// 
 			// label6
 			// 
@@ -345,6 +347,7 @@ namespace SatelliteDataProcessingApp
 			this.ButtonInsertionSortB.TabIndex = 22;
 			this.ButtonInsertionSortB.Text = "Insertion Sort";
 			this.ButtonInsertionSortB.UseVisualStyleBackColor = true;
+			this.ButtonInsertionSortB.Click += new System.EventHandler(this.ButtonInsertionSortB_Click);
 			// 
 			// TextBoxSelectionTimeB
 			// 
@@ -362,6 +365,7 @@ namespace SatelliteDataProcessingApp
 			this.ButtonSelectionSortB.TabIndex = 20;
 			this.ButtonSelectionSortB.Text = "Selection Sort";
 			this.ButtonSelectionSortB.UseVisualStyleBackColor = true;
+			this.ButtonSelectionSortB.Click += new System.EventHandler(this.ButtonSelectionSortB_Click);
 			// 
 			// ListBoxB
 			// 
@@ -369,6 +373,7 @@ namespace SatelliteDataProcessingApp
 			this.ListBoxB.ItemHeight = 16;
 			this.ListBoxB.Location = new System.Drawing.Point(690, 60);
 			this.ListBoxB.Name = "ListBoxB";
+			this.ListBoxB.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
 			this.ListBoxB.Size = new System.Drawing.Size(108, 340);
 			this.ListBoxB.TabIndex = 19;
 			// 
