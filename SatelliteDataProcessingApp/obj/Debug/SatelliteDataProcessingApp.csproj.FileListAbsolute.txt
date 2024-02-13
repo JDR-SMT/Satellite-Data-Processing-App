@@ -1,0 +1,12 @@
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.csproj.AssemblyReference.cache
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.Form1.resources
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.Properties.Resources.resources
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.csproj.GenerateResource.cache
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.csproj.CoreCompileInputs.cache
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\bin\Debug\SatelliteDataProcessingApp.exe.config
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\bin\Debug\SatelliteDataProcessingApp.exe
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\bin\Debug\SatelliteDataProcessingApp.pdb
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\bin\Debug\Galileo4.dll
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.csproj.CopyComplete
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.exe
+C:\- Obi\OneDrive\Code\VS\SatelliteDataProcessingApp\obj\Debug\SatelliteDataProcessingApp.pdb
