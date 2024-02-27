@@ -413,7 +413,7 @@ namespace SatelliteDataProcessingApp
 			this.Controls.Add(this.NumericUpDownMu);
 			this.Controls.Add(this.NumericUpDownSigma);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "Satellite Data Processing";
 			((System.ComponentModel.ISupportInitialize)(this.NumericUpDownSigma)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.NumericUpDownMu)).EndInit();
 			this.ResumeLayout(false);
